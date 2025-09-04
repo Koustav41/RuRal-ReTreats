@@ -1,107 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Basic Meta Tags -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
-
-  <!-- Theme & Tile Colors -->
-  <meta name="theme-color" content="#FFFFFF" />
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="./favicon/favicon-512x512.png" />
-
-  <!-- Favicons & Manifest -->
-  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/favicon-57x57.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/favicon-60x60.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/favicon-72x72.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/favicon-114x114.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/favicon-120x120.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/favicon-144x144.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/favicon-152x152.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/favicon-180x180.png" type="image/png" />
-  <link rel="icon" sizes="16x16" href="./favicon/favicon-16x16.png" type="image/png" />
-  <link rel="icon" sizes="32x32" href="./favicon/favicon-32x32.png" type="image/png" />
-  <link rel="icon" sizes="96x96" href="./favicon/favicon-96x96.png" type="image/png" />
-  <link rel="icon" sizes="192x192" href="./favicon/favicon-192x192.png" type="image/png" />
-  <link rel="icon" sizes="512x512" href="./favicon/favicon-512x512.png" type="image/png" />
-  <link rel="manifest" href="./favicon/manifest.json" />
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="./CSS/login.css" />
-  <link rel="stylesheet" href="./CSS/navbar.css" />
-
-  <!-- Scripts -->
-  <script src="./JS/login.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container">
-    <div class="form-box login">
-      <form id="login-form">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" id="login-username" placeholder="Username or Email" required />
-          <i class="fa-solid fa-user"></i>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <div class="form-box">
+            <h2>Login</h2>
+            <p>Welcome Back</p>
+            
+            <form>
+                <div class="input-group">
+                    <input type="text" id="username" required class="input-field">
+                    <label for="username">Username</label>
+                    <div class="glow-line"></div>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="password" required class="input-field">
+                    <label for="password">Password</label>
+                    <div class="glow-line"></div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <div class="remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <span>SIGN IN</span>
+                    <div class="btn-glow"></div>
+                </button>
+                
+                <div class="signup-link">
+                    Don't have an account? <a href="#">Register</a>
+                </div>
+            </form>
         </div>
-        <div class="input-box">
-          <input type="password" id="login-password" placeholder="Password" required />
-          <i class="fa-solid fa-lock"></i>
-        </div>
-        <div class="forgot-link">
-          <a href="#">Forgot password?</a>
-        </div>
-        <button type="submit" class="btn">Login</button>
-        <p>or Login with Social Platforms</p>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-google"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </form>
     </div>
-
-    <div class="form-box register">
-      <form id="register-form">
-        <h1>Registration</h1>
-        <div class="input-box">
-          <input type="text" id="username" placeholder="Username" required />
-          <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="input-box">
-          <input type="email" id="email" placeholder="Email" required />
-          <i class="fa-solid fa-envelope"></i>
-        </div>
-        <div class="input-box">
-          <input type="password" id="password" placeholder="Password" required />
-          <i class="fa-solid fa-lock"></i>
-        </div>
-        <button type="submit" class="btn">Register</button>
-        <p>or Register with Social Platforms</p>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-google"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </form>
-    </div>
-
-    <div class="toggle-box">
-      <div class="toggle-panel toggle-left">
-        <h1>Hello, Welcome!</h1>
-        <p>Don't have an Account?</p>
-        <button class="btn register-btn">Register</button>
-      </div>
-      <div class="toggle-panel toggle-right">
-        <h1>Welcome Back!</h1>
-        <p>Already have an Account?</p>
-        <button class="btn login-btn">Login</button>
-      </div>
-    </div>
-  </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 100,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#00d4ff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.8,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.4,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 5,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#00d4ff",
+                        "opacity": 0.6,
+                        "width": 1.5
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 100,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
 </body>
 </html>
